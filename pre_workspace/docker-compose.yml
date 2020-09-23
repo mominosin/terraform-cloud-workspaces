@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  terraform:
+    image: hashicorp/terraform:0.12.29
+    volumes:
+      - ./:/workdir
+    working_dir: "/workdir"
+    env_file:
+      - .env
+    command: env
